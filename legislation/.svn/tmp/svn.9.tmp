@@ -129,24 +129,25 @@ public class Action extends BaseObject
 /** Comments about this class */
      
     @Override
-    public class OVERRIDE{
     
         /**
        * Comments about this field
        */
         public int value;
         public boolean equals (Object o) {
-          if (getClass () != o.getClass ()
-          )  { 
-             return false; }
-         else {
-          return true; 
-         }
-        }
-      
+          if (this.getClass () != o.getClass ())  
+          { 
+              Action other = Action obj;
+                return this.getOid().equals(other.getOid());
+             
+          }else {
+          return false; 
+         }}
+        
+    @Override  
     public int hashCode() {
-        return value;
-    }}
+        return 0;
+    }
     
 /** Comments about this class */
     public int getYear() {
