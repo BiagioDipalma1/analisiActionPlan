@@ -144,7 +144,7 @@ public class Environment
     //this fields will be not modified in the code, they have read-only use
     private static final Pattern cdataPattern = Pattern.compile("<\\!\\[CDATA\\[(.*?)\\]\\]>");
     private static final Pattern senannotatedOpenPattern = Pattern.compile("<senannotated.+");
-    private static final Pattern senannotatedEndPattern = Pattern.compile("</senannotated.+");
+    
     private static final Pattern senagendaOpenPattern = Pattern.compile("<senagenda.+");
     private static final Pattern senagendaEndPattern = Pattern.compile("</senagenda.+");
     private static final Pattern sencalendarOpenPattern = Pattern.compile("<sencalendar.+");
@@ -173,6 +173,7 @@ public class Environment
         FileUtils.forceMkdir(calendarDirectory);
         FileUtils.forceMkdir(annotationDirectory);
         FileUtils.forceMkdir(transcriptDirectory);
+        Pattern senannotatedEndPattern = Pattern.compile("</senannotated.+");
         
         File file = null;
         
